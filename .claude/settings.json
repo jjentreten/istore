@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk wget *)",
+      "WebFetch(domain:developer.pagou.ai)",
+      "Bash(timeout 5 node server.js)",
+      "Bash(timeout 4 node server.js)",
+      "WebFetch(domain:docs.blackcatpay.com.br)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(node server.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(chromium-cli screenshot *)",
+      "Bash(dpkg -l)",
+      "Bash(xvfb-run --auto-servernum firefox --headless --screenshot /tmp/loja-screenshot.png --window-size=390,844 http://localhost:3000/)",
+      "Bash(firefox --headless --screenshot /tmp/loja-screenshot.png --window-size=390,844 http://localhost:3000/)",
+      "Bash(python3 -m json.tool --no-ensure-ascii)",
+      "WebFetch(domain:brutalcash.readme.io)",
+      "Bash(node --check /home/deon/istore/istore/index.html)",
+      "Bash(wait)",
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/125.0.0.0 Safari/537.36' -e https://www.magazineluiza.com.br/ https://m.magazineluiza.com.br/a-static/420x420/carregador-portatil-power-bank-turbo-20000mah-universal-legal-plus/chiqueeconomico/sj00601/2469cbb936e324655ed589ea4122c355.jpeg -o /home/deon/istore/istore/imagens/power-bank-legalplus-20000mah.jpg)",
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/125.0.0.0 Safari/537.36' https://a-static.mlcdn.com.br/420x420/carregador-portatil-power-bank-turbo-20000mah-universal-legalplus/chiqueeconomico/sj00601/2469cbb936e324655ed589ea4122c355.jpeg -o /home/deon/istore/istore/imagens/power-bank-legalplus-20000mah.jpg)"
+    ],
+    "additionalDirectories": [
+      "/home/deon/offgas/diskgasdojosuel.online"
+    ]
+  }
+}
