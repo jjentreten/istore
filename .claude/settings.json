@@ -19,7 +19,10 @@
       "Bash(node --check /home/deon/istore/istore/index.html)",
       "Bash(wait)",
       "Bash(curl -sL -A 'Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/125.0.0.0 Safari/537.36' -e https://www.magazineluiza.com.br/ https://m.magazineluiza.com.br/a-static/420x420/carregador-portatil-power-bank-turbo-20000mah-universal-legal-plus/chiqueeconomico/sj00601/2469cbb936e324655ed589ea4122c355.jpeg -o /home/deon/istore/istore/imagens/power-bank-legalplus-20000mah.jpg)",
-      "Bash(curl -sL -A 'Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/125.0.0.0 Safari/537.36' https://a-static.mlcdn.com.br/420x420/carregador-portatil-power-bank-turbo-20000mah-universal-legalplus/chiqueeconomico/sj00601/2469cbb936e324655ed589ea4122c355.jpeg -o /home/deon/istore/istore/imagens/power-bank-legalplus-20000mah.jpg)"
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/125.0.0.0 Safari/537.36' https://a-static.mlcdn.com.br/420x420/carregador-portatil-power-bank-turbo-20000mah-universal-legalplus/chiqueeconomico/sj00601/2469cbb936e324655ed589ea4122c355.jpeg -o /home/deon/istore/istore/imagens/power-bank-legalplus-20000mah.jpg)",
+      "Bash(which node *)",
+      "Read(//root/**)",
+      "Bash(/home/deon/pm2 restart *)"
     ],
     "additionalDirectories": [
       "/home/deon/offgas/diskgasdojosuel.online"

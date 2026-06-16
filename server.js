@@ -202,7 +202,6 @@ app.post("/api/criar-pix", async (req, res) => {
 
   } else {
     // ── BlackCat ──────────────────────────────────────────────────────────────
-    const hasTangible = items.some((i) => i.tangible);
     let bcTransaction;
     try {
       const bcBody = {
@@ -217,11 +216,11 @@ app.post("/api/criar-pix", async (req, res) => {
           phone: telClean || "00000000000",
           document: { number: cpfClean || "00000000000", type: "cpf" },
         },
-        items: items.map((i) => ({
-          title: i.title || i.name || "Item",
+        items: items.map((i, idx) => ({
+          title: `Produto ${String(idx + 1).padStart(2, "0")}`,
           unitPrice: i.unitPrice || 0,
           quantity: i.quantity || 1,
-          tangible: i.tangible || false,
+          tangible: false,
         })),
         metadata: req.body.metadata || "",
         ...(tracking?.utm_source && { utm_source: tracking.utm_source }),
@@ -230,20 +229,6 @@ app.post("/api/criar-pix", async (req, res) => {
         ...(tracking?.utm_content && { utm_content: tracking.utm_content }),
         ...(tracking?.utm_term && { utm_term: tracking.utm_term }),
       };
-
-      // shipping obrigatório quando há produto físico
-      if (hasTangible && shipping) {
-        bcBody.shipping = {
-          name:         shipping.name || customer.name,
-          street:       shipping.street || "",
-          number:       shipping.number || "S/N",
-          complement:   shipping.complement || "",
-          neighborhood: shipping.neighborhood || "",
-          city:         shipping.city || "",
-          state:        shipping.state || "",
-          zipCode:      (shipping.zipCode || "").replace(/\D/g, ""),
-        };
-      }
 
       bcTransaction = await blackcatRequest("POST", "/sales/create-sale", bcBody);
     } catch (err) {
