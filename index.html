@@ -120,9 +120,9 @@
   .destaques-track::-webkit-scrollbar{display:none}
   .dest-card{flex:0 0 auto;width:160px;background:#fff;border:1px solid var(--linha);border-radius:16px;overflow:hidden;cursor:pointer;scroll-snap-align:start;transition:.2s;display:flex;flex-direction:column}
   .dest-card:active{transform:scale(.98)}
-  .dest-img{height:118px;position:relative;background:linear-gradient(160deg,#fff,var(--creme-2));display:flex;align-items:center;justify-content:center}
+  .dest-img{height:118px;position:relative;background:#fff;display:flex;align-items:center;justify-content:center}
   .dest-img svg{width:78px}
-  .dest-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .dest-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:8px}
   .dest-badge{position:absolute;top:8px;left:8px;background:var(--bordo);color:var(--creme);font-size:.58rem;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:20px;font-weight:700}
   .dest-body{padding:10px 12px 12px;flex:1;display:flex;flex-direction:column}
   .dest-grupo-selo{display:inline-block;width:fit-content;font-size:.52rem;font-weight:700;letter-spacing:.3px;text-transform:uppercase;padding:2px 6px;border-radius:4px;margin-bottom:4px;background:#f6c90e;color:#0d2b14;white-space:nowrap;line-height:1.3;max-width:calc(100% - 4px);overflow:hidden;text-overflow:ellipsis}
@@ -187,14 +187,14 @@
   .pf-desc{font-size:.95rem;color:var(--cinza);font-weight:300;line-height:1.6;margin-bottom:6px}
 
   /* blocos de personalização e foto (dentro da ficha) */
-  .bloco{margin:16px 0 0;padding:16px;border-radius:14px;border:1px solid rgba(255,255,255,.15);background:var(--bordo);color:#fff}
+  .bloco{margin:16px 0 0;padding:16px;border-radius:14px;border:1px solid var(--linha);background:#e8f1fd;color:var(--tinta)}
   .bloco.foto{border-color:var(--dourado-claro);background:linear-gradient(160deg,#fffaf3,#fbf1e6);color:var(--tinta)}
   .bloco.foto .bloco-cab label{color:var(--cinza-claro)}
   .bloco.foto .bloco-dica{color:var(--cinza)}
   .bloco-cab{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px}
-  .bloco-cab label{font-size:.72rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.75);font-weight:700}
-  .bloco-cab .op{font-size:.62rem;text-transform:uppercase;letter-spacing:.5px;font-weight:700;color:rgba(255,255,255,.6);background:rgba(255,255,255,.12);padding:3px 9px;border-radius:20px}
-  .bloco-dica{font-size:.82rem;color:rgba(255,255,255,.8);font-weight:300;margin-bottom:12px}
+  .bloco-cab label{font-size:.72rem;letter-spacing:1px;text-transform:uppercase;color:var(--cinza);font-weight:700}
+  .bloco-cab .op{font-size:.62rem;text-transform:uppercase;letter-spacing:.5px;font-weight:700;color:var(--bordo);background:rgba(0,113,227,.12);padding:3px 9px;border-radius:20px}
+  .bloco-dica{font-size:.82rem;color:var(--cinza);font-weight:400;margin-bottom:12px}
   .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
   .chip{font-size:.76rem;color:var(--bordo);background:#fff;border:1px solid var(--rose);padding:7px 13px;border-radius:30px;cursor:pointer;transition:.2s}
   .chip:active{background:var(--bordo);color:var(--creme)}
@@ -221,7 +221,8 @@
   .var-opcoes{display:flex;flex-wrap:wrap;gap:8px}
   .var-op{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--linha);color:var(--bordo);border-radius:12px;padding:10px 14px;font-size:.9rem;font-weight:500;cursor:pointer;transition:.18s;font-family:inherit}
   .var-op .var-add{font-size:.78rem;color:var(--dourado);font-style:normal;font-weight:600}
-  .var-op.selecionado{border-color:var(--bordo);background:linear-gradient(160deg,#fff,var(--creme-2));box-shadow:0 2px 10px rgba(92,16,36,.12)}
+  .var-op.selecionado{border-color:var(--bordo);background:var(--bordo);color:#fff;box-shadow:0 2px 10px rgba(0,113,227,.35);font-weight:700}
+  .var-op.selecionado .var-add{color:#ffe066}
   .add-opcoes{display:flex;flex-direction:column;gap:8px}
   .add-op{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#fff;border:1.5px solid var(--linha);border-radius:12px;padding:11px 13px;cursor:pointer;transition:.18s;font-family:inherit}
   .add-op .add-info{flex:1;display:flex;flex-direction:column;line-height:1.25}
@@ -895,6 +896,9 @@ let KITS = [
   {id:'i2', grupo:'iphone', vendas:710, nome:'Kit Carregador Turbo Baseus 20W', badge:'Oferta', tag:'Modelo iPhone',
    desc:'Kit carregador Baseus 20W com tecnologia de carga rápida para iPhone e Android. Compacto, seguro e eficiente. Compatível com USB-C PD.',
    preco:99.90, de:149.90, img:'imagens/kit-carregador-turbo-baseus-20w.jpg'},
+  {id:'i4', grupo:'iphone', vendas:460, nome:'Cabo de Carregamento Apple USB-C', badge:'', tag:'Original Apple',
+   desc:'Cabo USB-C original Apple. Compatível com iPhone 15 e superiores, MacBook e iPad. Dados e carga rápida. 1 metro de comprimento.',
+   preco:34.90, de:49.90, img:'imagens/cabo-usb-c-apple.webp'},
   {id:'i3', grupo:'iphone', vendas:580, nome:'Carregador Apple USB-C 20W Original', badge:'Original Apple', tag:'Original Apple',
    desc:'Carregador Apple USB-C de 20W original. Compatível com iPhone 8 e superiores, iPad e AirPods. Tecnologia Power Delivery para carga rápida segura.',
    preco:79.90, de:139.90, img:'imagens/carregador-apple-usb-c-20w-original.jpg'},
@@ -908,6 +912,55 @@ let KITS = [
   {id:'p3', grupo:'powerbank', vendas:480, nome:'Power Bank i2GO 20.000mAh (Preto)', badge:'Novidade',
    desc:'Power Bank i2GO de 20.000mAh com entrada USB-C e Micro-USB. Carregamento simultâneo de 2 dispositivos. Display LED indicador de carga. Design compacto e resistente.',
    preco:109.90, de:169.90, img:'imagens/power-bank-i2go-20000mah.jpg'},
+  // --- CAPAS PARA CELULAR ---
+  {id:'c1', grupo:'capas', vendas:630, nome:'Capa de Silicone para iPhone (Todos os Modelos)', badge:'Mais vendido', tag:'Silicone Premium',
+   desc:'Capa de silicone premium com proteção completa. Escolha o modelo do seu iPhone e a cor preferida. Acabamento suave e aderente, protege contra quedas e arranhões.',
+   preco:15.00, de:null,
+   img:'imagens/capa-silicone-iphone.png',
+   variacoes:[
+     {nome:'Modelo do iPhone', opcoes:[
+       {nome:'iPhone 7 / 8', add:0},
+       {nome:'iPhone 7 Plus / 8 Plus', add:0},
+       {nome:'iPhone X / XS', add:0},
+       {nome:'iPhone XS Max', add:0},
+       {nome:'iPhone XR', add:0},
+       {nome:'iPhone 11', add:0},
+       {nome:'iPhone 11 Pro', add:0},
+       {nome:'iPhone 11 Pro Max', add:0},
+       {nome:'iPhone 12', add:0},
+       {nome:'iPhone 12 Mini', add:0},
+       {nome:'iPhone 12 Pro', add:0},
+       {nome:'iPhone 12 Pro Max', add:0},
+       {nome:'iPhone 13', add:0},
+       {nome:'iPhone 13 Mini', add:0},
+       {nome:'iPhone 13 Pro', add:0},
+       {nome:'iPhone 13 Pro Max', add:0},
+       {nome:'iPhone 14', add:0},
+       {nome:'iPhone 14 Plus', add:0},
+       {nome:'iPhone 14 Pro', add:0},
+       {nome:'iPhone 14 Pro Max', add:0},
+       {nome:'iPhone 15', add:0},
+       {nome:'iPhone 15 Plus', add:0},
+       {nome:'iPhone 15 Pro', add:0},
+       {nome:'iPhone 15 Pro Max', add:0},
+       {nome:'iPhone 16', add:0},
+       {nome:'iPhone 16 Plus', add:0},
+       {nome:'iPhone 16 Pro', add:0},
+       {nome:'iPhone 16 Pro Max', add:0},
+     ]},
+     {nome:'Cor', opcoes:[
+       {nome:'Preto', add:0},
+       {nome:'Branco', add:0},
+       {nome:'Rosa', add:0},
+       {nome:'Azul', add:0},
+       {nome:'Verde', add:0},
+       {nome:'Roxo', add:0},
+       {nome:'Vermelho', add:0},
+       {nome:'Transparente', add:0},
+       {nome:'Amarelo', add:0},
+       {nome:'Laranja', add:0},
+     ]},
+   ]},
   // --- CARREGADOR UNIVERSAL (TIPO C) ---
   {id:'u1', grupo:'universal', vendas:750, nome:'Carregador Turbo 50W USB-C + Cabo Tipo C 1m', badge:'Mais vendido',
    desc:'Kit carregador turbo 50W USB-C com cabo Tipo C de 1m incluso. Compatível com Samsung, Motorola, Xiaomi e todos os celulares USB-C. Carga rápida e segura.',
@@ -1006,6 +1059,14 @@ const GRUPOS = [
       {key:'todas', nome:null, filtro: k => true},
     ]
   },
+  {
+    key: 'capas',
+    nome: 'Capas para Celular',
+    selo: 'CAPAS',
+    subsecoes: [
+      {key:'todas', nome:null, filtro: k => true},
+    ]
+  },
 ];
 function catDoKit(k){ return k.grupo || 'iphone'; }
 function qtdNaSacola(kitId){ return estado.sacola.filter(i=>i.kitId===kitId).reduce((s,i)=>s+i.qty,0); }
@@ -1098,7 +1159,7 @@ function blocoEscolhaSegura(){
 function cardDestaque(k){
   const temDesc = k.de && k.de>k.preco;
   const grupo = GRUPOS.find(g=>g.key===k.grupo);
-  const seloLabel = grupo ? (grupo.key==='iphone' ? 'iPhone' : grupo.key==='powerbank' ? 'Power Bank' : 'Tipo C') : '';
+  const seloLabel = grupo ? (grupo.key==='iphone' ? 'iPhone' : grupo.key==='powerbank' ? 'Power Bank' : grupo.key==='capas' ? 'Capa' : 'Tipo C') : '';
   return `<div class="dest-card" onclick="abrirProduto('${k.id}')">
     <div class="dest-img">${k.svg||''}${k.img?`<img src="${k.img}" alt="${k.nome}" loading="lazy" onerror="this.remove()">`:''}${k.badge?`<span class="dest-badge">${k.badge}</span>`:''}</div>
     <div class="dest-body">
